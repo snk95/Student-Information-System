@@ -1,2 +1,2 @@
 # Student-Information-System
-This project is about giving feedback to professors. The RESTful website was developed using Ruby on Sinatra, Html, CSS for the frontend and to handle browser requests. SQLite database was used in backend.
+This project is about giving feedback to professors. Students can add their respective feedbacks about professors and thier comment along with the name and timestamp was displayed on the portal. Admin can add,edit and delete students. The RESTful website was developed using Ruby on Sinatra, Html, CSS for the frontend and to handle browser requests. SQLite database was used in backend.
