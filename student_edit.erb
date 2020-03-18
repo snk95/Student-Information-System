@@ -1,0 +1,11 @@
+<h2>Edit Student information</h2>
+<form action='/students/<%= @students.id %>/edit' method='post'>
+	Student ID : <%= @students.id%>
+	<p>
+	First Name: <input type="text" name="firstname" required="required" value=<%=@students.firstname%>></input><br><br>
+	Last Name: <input type="text" name="lastname" required="required" value=<%=@students.lastname%>></input><br><br>
+	Birthday: <input type="date" name="birthday" required="required" value=<%=@students.birthday%>></input><br><br>
+	Address: <input type="text" name="address" required="required" value=<%=@students.address%>></input><br>
+	</p>
+	<input type="submit" name="submit">
+</form>

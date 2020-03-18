@@ -1,0 +1,13 @@
+<h2> Comments </h2>
+<% if session[:admin] %>
+<form action='/comments/new'>
+        <button type="submit"> New Comment</button>
+</form>
+<% end %>
+
+<% @comments.each do |comment| %>
+<ul>
+	<li><a href="/comments/<%= comment.id %>"><%= comment.content %></a><%= " - " + comment.created_at.strftime("%Y-%m-%d %H:%M:%S") %></li>
+</ul>
+<% end %>
+<br>

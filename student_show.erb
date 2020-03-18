@@ -1,0 +1,42 @@
+<h2>Student Information</h2>
+<a href="/students">Back to Student Lists</a><br><br>
+<table border = "1">
+  <tr>
+    <th>Student ID:</th>
+    <th> <%= @students.id %></th>
+  </tr>
+  <tr>
+    <th>First Name:</th> 
+    <th> <%= @students.firstname %></th>
+  </tr>  
+  <tr>
+    <th>Last Name:</th>
+    <th> <%= @students.lastname %></th>
+  </tr>
+  <tr>
+    <th>Birthday:</th>
+    <th> <%= @students.birthday.to_s %></th>
+  </tr>
+  <tr>
+    <th>Address:</th>
+    <th> <%= @students.address.to_s %></th>
+  </tr>
+</table>
+
+
+
+<br>
+<% if session[:admin] %>
+<div align="left" style="float:left">
+<form action='/students/<%=@students.id%>/edit' method='get'>
+  	<button type="submit"> Edit </button>
+</form>
+</div>
+
+<div align="">
+<form action='/students/<%=@students.id%>/delete' method='post'>
+  	<button type="submit">Delete</button>
+</form>
+</div>
+<br>
+<% end %>

@@ -1,0 +1,11 @@
+<h2>Add New Student</h2>
+<form action='/students/new' method='post'>
+	<p>
+	Student ID: <input type="text" name="id" value="<%= @new_id %>" required="required"></input><br><br>
+	First Name: <input type="text" name="firstname" required="required"></input><br><br>
+	Last Name : <input type="text" name="lastname" required="required"></input><br><br>
+	Birthday  : <input type="date" name="birthday" required="required"></input><br><br>
+	Address   : <input type="text" name="address" required="required"></input><br>
+	</p>
+	<input type="submit" name="submit">
+</form>

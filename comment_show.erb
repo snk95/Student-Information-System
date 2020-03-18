@@ -1,0 +1,9 @@
+<h2>Comments</h2>
+
+<p> User: <%= @comments.username.to_s %> </p>
+<p> Time: <%= @comments.created_at.strftime("%Y-%m-%d %H:%M:%S") %> </p>
+<p> Comment: <%= @comments.content.to_s %> </p>
+<br>
+<form action='/comments'>
+        <button type="submit"> Back </button>
+</form>

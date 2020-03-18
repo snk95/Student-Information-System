@@ -1,0 +1,23 @@
+<h2> Students </h2>
+<% if session[:admin] %>
+<form action='/students/new'>
+        <button type="submit"> New Student</button>
+</form>
+<% end %>
+
+<h3 style="color:red"><%= @msg %></h3> 
+<table border = "1" style="width:50%">
+  <tr>
+    <th><span style="color:#880000;">Student ID</span></th>
+    <th><span style="color:#880000;">Student Name</span></th>
+  </tr>
+  <% @students.each do |student| %>
+    <tr>
+        <th><a href="/students/<%= student.id %>"><%= student.id %></a></th>
+        <th><%= student.firstname.to_s %> <%= student.lastname.to_s %></th>
+    </tr>
+  <% end %>
+
+</table>
+
+
